@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>위니브 로그인화면</title>
+    <title>위니브 첫 화면</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
+      .blind {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+      }
+
       body {
         background-color: white;
       }
@@ -18,16 +27,43 @@
         margin: 200px auto;
         width: 500px;
         border: 1px solid #c4c4c4;
-        box-sizing: border-box;
         border-radius: 5px;
+        text-align: center;
         padding: 29px;
+      }
+      .box-login a {
+        text-decoration: none;
+      }
+      .box-login .txt-intro {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+      }
+
+      .box-login .link-login {
+        display: block;
+        margin-top: 32px;
+        padding: 17px 0 15px 0;
+        background: #2f80ed;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        color: #fff;
+        text-align: center;
+      }
+      .box-login .img-logo {
+        width: 138px;
+        margin-bottom: 28px;
       }
     </style>
   </head>
   <section class="box-login">
-    <img class="logo" src="./images/weniv-logo.svg" alt="" />
+    <h2 class="blind">위니브 로그인</h2>
+    <img class="img-logo" src="./images/weniv-logo.svg" alt="" />
     <p class="txt-intro">위니브를 더 즐겁고 편리하게 이용하세요.</p>
-    <a class="" href="login.html">로그인</a>
+    <a class="link-login" href="login.html">로그인</a>
   </section>
 
   <body></body>

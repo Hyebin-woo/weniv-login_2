@@ -1,31 +1,195 @@
 @import "reset.css";
-body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 a {
   text-decoration: none;
   color: #767676;
   cursor: pointer;
 }
+button {
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  width: 100%;
+  height: 50px;
+}
 
 .cont-login {
-  padding: 20px;
-  width: 500px;
+  margin: 50px auto;
+  width: 520px;
   text-align: center;
   background: #ffffff;
   border: 1px solid #c4c4c4;
+  box-sizing: border-box;
   border-radius: 10px;
 }
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 18px;
+  text-align: center;
+  border-bottom: 1px solid #c4c4c4;
+}
 
-.title {
-  padding: 19px 0 18px 0;
+.header-title {
+  margin: 0 auto;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+.link-close {
+  float: right;
+  width: 16px;
+  height: 16px;
+}
+
+.form-idpw {
+  padding: 26px 24px;
+  text-align: left;
+}
+.form-idpw .txt-greeting {
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.form-idpw .id,
+.pw {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.txt-chk {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+  color: #767676;
+  margin: 16px 0 20px;
+  text-align: left;
+}
+#check {
+  vertical-align: bottom;
+}
+
+.btn-login {
+  padding: 14px 0px;
+  background: #2f80ed;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.cont-find {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.cont-find .link-join::after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 14px;
+  margin: 0 10px 0 12px;
+  margin-bottom: -2px;
+  background-color: #767676;
+}
+
+.line-or {
+  display: flex;
+  gap: 1em;
   align-items: center;
-  border-bottom: 1px solid #c4c4c4;
+  margin: 30px 0 20px;
+  color: #767676;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.line-or::before,
+.line-or::after {
+  content: " ";
+  flex-grow: 1;
+  height: 1px;
+  margin: 0 13px;
+  background-color: currentColor;
+  opacity: 0.4;
+}
+
+.login-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 24px 24px;
+  /* width: 100%; */
+}
+.login-list [class$="-btn"] {
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 0;
+}
+.login-list [class$="-btn"]:hover {
+  opacity: 0.7;
+}
+
+.google-btn {
+  border: 1px solid #c4c4c4;
+}
+.facebook-btn {
+  border: 1px solid #2d9cdb;
+  margin-top: 10px;
+}
+.naver-btn {
+  border: 1px solid #00bf18;
+  margin-top: 10px;
+}
+.kakao-btn {
+  border: 1px solid #f2c94c;
+  margin-top: 10px;
+}
+
+.google-btn::before {
+  float: left;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url("./images/google.png");
+  margin-left: 12px;
+}
+
+.facebook-btn::before {
+  float: left;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url("./images/facebook.png");
+  margin-left: 12px;
+}
+
+.naver-btn::before {
+  float: left;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url("./images/naver.png");
+  margin-left: 12px;
+}
+.kakao-btn::before {
+  float: left;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url("./images/kakao.png");
+  margin-left: 12px;
 }

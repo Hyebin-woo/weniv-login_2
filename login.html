@@ -10,30 +10,57 @@
   <body>
     <article class="cont-login">
       <header class="header">
-        <h2 class="title">로그인 또는 회원가입</h2>
-        <img class="btn-close"  src="image/close.png"></img>
+        <h2 class="header-title">로그인 또는 회원가입</h2>
+        <a class="link-close" href="#none"></a>
+        <img class="btn-close"  src="./images/close.png"></img>
       </header>
+
       <form class="form-idpw" action="#">
         <p class="txt-greeting">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
         <input class="id" type="text" name="id" placeholder="아이디" required />
-        <input class="id" type="pw" name="pw" placeholder="비밀번호" required />
+        <input class="pw" type="password" name="pw" placeholder="비밀번호" required />
         <p class="txt-chk">
-          <input class="chk" type="checkbox" name="checkbox" />
+          <img
+                id="check"
+                src="./images/check-box_off.png"
+                onclick="onImg()"
+              />
           로그인 상태유지
         </p>
         <button type="submit" class="btn-login">로그인</button>
       </form>
-      <div cont-find>
+
+      <div class="cont-find">
         <a class="link-join" href="#none">회원가입</a>
         <a class="link-idpw" href="#none">아이디/비밀번호</a>
       </div>
-      <span class="line_or">또는</span>
+      <span class="line-or">또는</span>
       <section class="login-list">
-        <a class="btn-google">구글 계정으로 로그인</a>
-        <a class="btn-facebook">페이스북 계정으로 로그인</a>
-        <a class="btn-naver">네이버 계정으로 로그인</a>
-        <a class="btn-kakao">카카오톡 계정으로 로그인</a>
+        <a class="google-btn">
+        구글 계정으로 로그인</a>
+        <a class="facebook-btn">
+          페이스북 계정으로 로그인</a>
+        <a class="naver-btn">
+          네이버 계정으로 로그인</a>
+        <a class="kakao-btn">
+         카카오톡 계정으로 로그인</a>
       </section>
     </article>
+<script>
+  const offcheck=document.querySelector("#check");
+  let isSelected=false;
+
+  function onImg(){
+    if(isSelected){
+      offcheck.src="./images/check-box_off.png";
+      isSelected=false;
+    }else{
+      offcheck.src="./images/check-box_on.png";
+      isSelected=true;
+    }
+  }
+
+</script>
+
   </body>
 </html>
